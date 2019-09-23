@@ -1,0 +1,24 @@
+%Init
+%Taux d’arrivée des clients
+prompt = 'lambda: ';
+lambda = input(prompt);
+%Taux de service
+prompt = 'mu: ';
+mu = input(prompt);
+
+%Calcul des caractéristiques de performances
+%ns: Le nombre moyen de clients dans le système
+ns = MM1_ns(lambda, mu);
+fprintf('Le nombre moyen de clients dans le système est: %s\n', ns);
+
+%nf: Le nombre moyen des clients dans la file 
+nf = MM1_nf(lambda, mu);
+fprintf('Le nombre moyen de clients dans la file : %s\n', nf);
+
+%ts: Le temps de séjour moyen d’un client dans le système
+ts = MM1_ts(lambda, mu);
+fprintf('Le temps de séjour moyen d’un client dans le système: %s\n',ts);
+
+%tf: La durée d’attente moyenne d’un client dans la file
+tf = MM1_tf(lambda, mu);
+fprintf('La durée d’attente moyenne d’un client dans la file: %s\n', tf);
