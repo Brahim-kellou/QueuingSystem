@@ -6,6 +6,6 @@ for i=0:s-1
     term = u^i/factorial(i);
     sum = sum + term;
 end
-total = sum + u^s/(factorial(s)*(1-rho));
+total = sum + u^s/(factorial(s))*s*mu/(s*mu-lambda);
 p0 = 1/total;
 out = p0;
